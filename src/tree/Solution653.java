@@ -26,6 +26,23 @@ public class Solution653 {
         }
         return false;
     }
+    public boolean findTarget1(TreeNode root, int k) {
+        help(root);
+        int lo = 0,hi = res.size()-1;
+        //小心
+        while(lo<hi){
+            int temp = res.get(lo) + res.get(hi);
+            if(temp > k){
+                hi--;
+            }
+            else if (temp < k){
+                lo++;
+            }else{
+                return true;
+            }
+        }
+        return false;
+    }
     public void help(TreeNode root){
         if(root == null){
             return;
