@@ -1,0 +1,24 @@
+package luogu.math;
+
+import java.util.Scanner;
+
+public class P1028 {
+    static int res1 = 0;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        P1028 p1028 = new P1028();
+        p1028.help(i);
+        System.out.println(res1+1);
+    }
+    public void help(int res){
+        if(res<=0){
+            return;
+        }
+        System.out.println(res);
+        res1++;
+        for (int i = 1;i<res/2;i++){
+            help(i);
+        }
+    }
+}

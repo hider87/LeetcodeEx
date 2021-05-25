@@ -1,39 +1,39 @@
-package tree;
-
-public class Solution96 {
-    // dp
-//    public int numTrees(int n) {
-//        int[] G = new int[n + 1];
-//        G[0] = 1;
-//        G[1] = 1;
+//package tree;
 //
-//        for (int i = 2; i <= n; ++i) {
-//            for (int j = 1; j <= i; ++j) {
-//                G[i] += G[j - 1] * G[i - j];
+//public class Solution96 {
+//    // dp
+////    public int numTrees(int n) {
+////        int[] G = new int[n + 1];
+////        G[0] = 1;
+////        G[1] = 1;
+////
+////        for (int i = 2; i <= n; ++i) {
+////            for (int j = 1; j <= i; ++j) {
+////                G[i] += G[j - 1] * G[i - j];
+////            }
+////        }
+////        return G[n];
+////    }
+//        public int numTrees(int n) {
+//            long C = 1;
+//            for (int i = 0; i < n; ++i) {
+//                C = C * 2 * (2 * i + 1) / (i + 2);
 //            }
+//            return (int) C;
 //        }
-//        return G[n];
+//    public static void main(String[] args) {
+//        Solution96 solution96 = new Solution96();
+//        System.out.println(solution96.numTrees(10));
 //    }
-        public int numTrees(int n) {
-            long C = 1;
-            for (int i = 0; i < n; ++i) {
-                C = C * 2 * (2 * i + 1) / (i + 2);
-            }
-            return (int) C;
-        }
-    public static void main(String[] args) {
-        Solution96 solution96 = new Solution96();
-        System.out.println(solution96.numTrees(10));
-    }
-}
-
-class Solution {
-    // 卡塔兰数
-    public int numTrees(int n) {
-        long val = 1;
-        for (int i = 0; i < n; ++i) {
-            val = val * 2 * (2 * i + 1) / (i + 2);
-        }
-        return (int) val;
-    }
-}
+//}
+//
+//class Solution {
+//    // 卡塔兰数
+//    public int numTrees(int n) {
+//        long val = 1;
+//        for (int i = 0; i < n; ++i) {
+//            val = val * 2 * (2 * i + 1) / (i + 2);
+//        }
+//        return (int) val;
+//    }
+//}
